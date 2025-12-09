@@ -62,4 +62,3 @@ Diseñar y construir un dashboard que permita:
 
 
 
-Si quieres, puedo adaptarlo a **Power BI, Tableau, Python, SQL** o a la estructura exacta de tu proyecto. También puedo generarte badges, screenshots o una versión en inglés.
