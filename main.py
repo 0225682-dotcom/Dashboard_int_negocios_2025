@@ -1,5 +1,6 @@
 import streamlit as st
-st.markdown"""
+st.markdown
+"""
 # 🚀 Business Intelligence Dashboard
 
 **Análisis, visualización y toma de decisiones inteligentes**
