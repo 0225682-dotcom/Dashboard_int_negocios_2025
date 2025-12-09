@@ -1,4 +1,7 @@
 # Bibliotecas
 pandas
+numpy
 matplotlib
 seaborn 
+plotly
+openpyxl
