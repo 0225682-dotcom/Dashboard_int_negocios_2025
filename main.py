@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import ploty as ply
 import openpyxl 
 # -----------------------------------------------------------
 # CONFIGURACIÓN INICIAL
