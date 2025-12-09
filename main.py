@@ -1,5 +1,5 @@
 import streamlit as st
-st.markdown
+st.markdown(
 """
 # 🚀 Business Intelligence Dashboard
 
@@ -60,5 +60,7 @@ Diseñar y construir un dashboard que permita:
 * Segmentación por cliente, categoría o canal
 * Comparativas temporales
 )
-* Análisis de comportamiento (tendencias, estacionalidad)"""
+* Análisis de comportamiento (tendencias, estacionalidad
 * Indicadores operativos o estratégicos
+"""
+)
