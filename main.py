@@ -93,8 +93,22 @@ Diseñar y construir un dashboard que permita:
 """
 )
 with tab2:
-  st.subheader("Datos")
-  st.dataframe(df)
+with tab2:
+    st.subheader("Dataset del ejercicio")
+
+    st.write("Selecciona el rango de observaciones que deseas visualizar:")
+
+    # Slider de rango equivalente a IntRangeSlider de ipywidgets
+    start, end = st.slider(
+        "Rango de filas:",
+        min_value=0,
+        max_value=len(df),
+        value=(0, len(df)),   # valor inicial: toda la tabla
+        step=1
+    )
+
+    # Mostrar sección del dataframe
+    st.dataframe(df.iloc[start:end])
 
 with tab3:
   st.subheader("Visualizaciones ")
