@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import ploty.express as px
 # -----------------------------------------------------------
 # CONFIGURACIÓN INICIAL
 # -----------------------------------------------------------
@@ -16,7 +17,7 @@ st.caption("Universidad Panamericana · Campus CDMX")
 # -----------------------------------------------------------
 @st.cache_data 
 def load_data():# Habilidad de crear cache, Carga de datos 1 vez para no volver a cargar los datos
-    url = UBER dataset.xlsx
+    url = "UBER dataset.xlsx"
     all_sheets=pd.read_excel(url,sheet_name=None)
     return all_sheets["Switchbaks"]
 df = load_data()
