@@ -1,5 +1,35 @@
 import streamlit as st
-st.markdown(
+  import streamlit as st
+import pandas as pd
+import plotly.express as px
+# -----------------------------------------------------------
+# CONFIGURACIÓN INICIAL
+# -----------------------------------------------------------
+st.set_page_config(
+    page_title="Tablero de Inteligencia de Negocios",
+    page_icon="📊",
+    layout="wide"
+)
+st.title("📊 Tablero Interactivo – Inteligencia de Negocios")
+st.caption("Universidad Panamericana · Campus CDMX")
+
+# -----------------------------------------------------------
+# CARGA DE DATOS
+# -----------------------------------------------------------
+@st.cache_data 
+def load_data():# Habilidad de crear cache, Carga de datos 1 vez para no volver a cargar los datos
+  modified_url = data_url.replace('/edit?usp=sharing', '/export?format=xlsx')
+  all_sheets = pd.read_excel(modified_url, sheet_name=None)
+  type(all_sheets)
+  return all_sheets["Switchbaks"]
+df = load_data()
+# -----------------------------------------------------------
+# PESTAÑAS PRINCIPALES
+# -----------------------------------------------------------
+tab1, tab2, tab3 = st.tabs(["📈 Documentación General", "🔍 Datos", "📊 Gráficas"])
+with tab1:
+  st.subheader("Documentacion General del tablero")
+  st.markdown(
 """
 # 🚀 Business Intelligence Dashboard
 
@@ -64,3 +94,10 @@ Diseñar y construir un dashboard que permita:
 * Indicadores operativos o estratégicos
 """
 )
+with tab2:
+  st.subheader("Datos")
+  st.dataframe(df)
+
+with tab3:
+  st.subheader("Visualizaciones ")
+  st.write("Hola Mundo")
